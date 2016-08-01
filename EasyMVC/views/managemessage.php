@@ -22,23 +22,7 @@ header("content-type: text/html; charset=utf-8");
         <link rel="stylesheet" href="../views/css/style.css">
         <link rel="stylesheet" href="../views/css/button.css">
         <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
-        <script>
-        $(document).ready(init);
-            function init(){
-            // $("table td").on("click","button",deletemessage)
-                
-            }
-        function deletemessage(){
-            id=$(this).val();
-            alert("1");
-            // $.get("delemessage?id="+$(this).val(),function(data){
-                
-            //     if(data){
-            //         alert("刪除成功");
-            //     }
-            // })
-        }    
-        </script>
+       <link rel="icon" type="../views/image/png" href="../views/images/icon.png" sizes="48x48">
     </head>
     <body>
         <div class="table-title"><h3>Manage Only</h3>  </div>

@@ -5,46 +5,37 @@ class HomeController extends Controller {
     function index() {
         // 圖片顯示
         $indexslide=$this->model("index");
-        $config=$this->model("dbconnect");
-        $connection= $config->dbcon();
-        $show=$indexslide->selectindex($connection);
-        // $sqlshow=$indexslide->indexSlide($connection);
+        $show=$indexslide->selectindex();
         $this->view("index",$show);
-        $grab=$indexslide->indexSlide($connection);
-        
+        $grab=$indexslide->indexSlide();
         //聯絡我們
         $message = $this->model("index");
-        $config=$this->model("dbconnect");
-        $connection= $config->dbcon();
-        $message->indexMessage($connection);
-        
+        $return=$message->indexMessage();
+        $this->view("alert",$return);
     }
     
     function movie(){
         $moiveshow=$this->model("movie");
-        $config=$this->model("dbconnect");
-        $connection= $config->dbcon();
-        $show=$moiveshow->selectmoive($connection);
+        $grab=$moiveshow->grabmoive();
+        $show=$moiveshow->selectmoive();
         $this->view("movie",$show);
-        $grab=$moiveshow->grabmoive($connection);
+        
         
     }
     function movietimes(){
         $moivetimeshow=$this->model("movietimes");
-        
-        $config=$this->model("dbconnect");
-        $connection= $config->dbcon();
-        $show=$moivetimeshow->selectmoivetimes($connection);
-        
+        $grab=$moivetimeshow->grabmoivetimes();
+        $show=$moivetimeshow->selectmoivetimes();
         $this->view("movietimes",$show);
-        $grab=$moivetimeshow->grabmoivetimes($connection);
         
     }
     function get(){
-        $config=$this->model("dbconnect");
-        $connection= $config->dbcon();
-        $showtime=$this->model("getmovie");
-        $get=$showtime->showmovie($connection);
+        
+        $showtime=$this->model("movietimes");
+        $get=$showtime->showmovie();
+        //  $this->view("movietimes");
+        
+       
     }
 }
 

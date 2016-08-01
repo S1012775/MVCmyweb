@@ -1,9 +1,5 @@
 <?php 
-// require("../myweb/php/indexSM.php");
-require("indexslide.php");
-// $selectindex =selectindex();
-//  indexMessage();
-        
+require_once("indexslide.php");
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -70,8 +66,7 @@ require("indexslide.php");
         <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 900px; height: 350px; overflow: hidden;">
         <?php  
         
-       foreach ($data as $value) {
-        ?>
+       foreach ($data as  $value) {  ?>
             <div style="height:150px;">
                  <?php 
                  echo $value;

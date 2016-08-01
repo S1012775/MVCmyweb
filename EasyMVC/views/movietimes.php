@@ -16,6 +16,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<script src="../views/js/selectuser.js"></script>
 <title>UniversalCinema-movietimes</title>
 <!-- Bootstrap -->
+<link rel="icon" type="../views/image/png" href="../views/images/icon.png" sizes="48x48">
 <link rel="stylesheet" href="../views/css/style.css">
 <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; width=device-width;">
 <link href="../views/css/bootstrap.min.css" rel='stylesheet' type='text/css' />
@@ -85,14 +86,30 @@ License URL: http://creativecommons.org/licenses/by/3.0/
               <option value="">請選擇電影</option>
               <option value=""><?php
                     foreach ($data as $value){
-                        
                           echo '<option value="' .$value[0]. '">' . $value[1]. '</option>' . "\n";
                      }?></option>
               
               </select>
             </form>
             <br>
-            <div id="txtHint"><b>Select movie...</b></div>
+            <div id="txtHint"><b>Select movie...
+            <?php
+        	if(isset($_GET["q"])){
+        	echo "<table>
+				<tr>
+				<th>電影名稱</th>
+				<th>電影時間 </th>
+				</tr>";
+        	foreach ($data as $datatable){	 	
+    			echo "<td>" . $datatable[0] ."<br>".$datatable[1]. "</td>";
+				echo "<td>" . $datatable[2] .  $datatable[3] . "</td>";
+            }
+            echo "</table>";
+        	}
+            ?>
+            
+            </b>
+            </div>
 				
 				
 				
