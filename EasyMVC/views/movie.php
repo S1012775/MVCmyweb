@@ -83,23 +83,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="main row">
  	 	<h2 class="style">檔期電影</h2>
  	 	 <div class="grids_of_4 row" style="height:'600px'">
-	 	 	<?php   
-	 	 	foreach ($data as $value){
-	 	 	?>
+	 	 	<?php   	foreach ($data as $value){	 	?>
 				<div class="col-md-4 images_1_of_3">
-				 
 					<div class="fancyDemo";>
-						<a rel="group" title="" ><?php echo $value[0]; ?></a>
-						 <!--// echo "<img src= '". $title3->item(0)->nodeValue . "' style='height:400px;'/>"; -->
+					<a rel="group" title="" >
+					<?php	echo  "<a href='". "http://www.u-movie.com.tw/".$value[3]."' target='_blank'' />".$value[0];?>
 					</div>
 					 <h3><?php echo $value[1] ?></h3>
 					  <h6><?php echo  $value[2] ?></h6>
-					
-					 
+					  </a>
 				</div>
-				 <?php
-				 }
-				 ?>
+			 <?php	 }	 ?>
 		</div>
 			</div>
 </div><!-- end main -->

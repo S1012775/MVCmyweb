@@ -33,4 +33,31 @@
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
+<<<<<<< HEAD
+}
+.addbutton {
+    background-color:  #404040;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.modifybutton {
+    background-color:  #ff751a;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+=======
+>>>>>>> fc394dfb4b481689d0219957fa674ce174e8ea22
 }
